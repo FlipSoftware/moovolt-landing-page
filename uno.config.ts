@@ -30,8 +30,30 @@ export default defineConfig({
           a:hover {
             text-decoration-line: underline;
             text-underline-offset: 4px;
-            text-decoration-color: rgb(253 224 71);
+            text-decoration-color: hsl(210 40% 38%);
+            color: hsl(210 40% 38%);
           }
+          a:focus {
+            text-decoration-line: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: hsl(210 40% 38%);
+            color: hsl(210 40% 38%);
+          }
+          @keyframes circular-charging {
+
+            0% {
+                transform: rotate3d(0, 0, 1, 0deg);
+            }
+            100% {
+                transform: rotate3d(0, 0, 1, -360deg);
+            }
+
+        }
+
+        .circular-charging {
+            animation: circular-charging 6s linear infinite;
+            transform-origin: 600% 600%;
+        }
         `
       }
     ],
