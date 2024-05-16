@@ -54,6 +54,19 @@ export default defineConfig({
             animation: circular-charging 6s linear infinite;
             transform-origin: 600% 600%;
         }
+        @keyframes pulse {
+            0%,
+            100% {
+              opacity: 0.5;
+            }
+            50% {
+              opacity: 0.25;
+            }
+          }
+          .hero-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          }
+
         `
       }
     ],
@@ -69,7 +82,7 @@ export default defineConfig({
             _btn_hover:
                 "_transitions",
             _btn_click: "_transitions scale-97 brightness-75",
-            hud: "color-current"
+            hud: ""
         },
     ],
     theme: {
@@ -89,6 +102,7 @@ export default defineConfig({
         presetWebFonts({
             fonts: {
                 comfortaa: "Comfortaa",
+                montserrat: "Montserrat"
             },
         }),
         presetShadcn(),
