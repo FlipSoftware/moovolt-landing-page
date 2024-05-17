@@ -2,12 +2,14 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
     Card,
-    // CardContent,
+    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+
+import { Badge } from "@/components/ui/badge";
 
 export default function App() {
     function getCurrentYear(): number {
@@ -62,17 +64,9 @@ export default function App() {
                     <section className="grid w-full py-90 <lg:py-64 <md:py-24 place-items-center">
                         <Card className="p-4">
                             <div className="max-w-[1200px] grid items-center grid-flow-col <lg:grid-auto-flow-row grid-cols-[200px,repeat(auto-fill,minmax(15%,100px)),300px]">
-                                <p className="m-4 text-gray-500 text-center md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                                    O Moov.olt é uma
-                                    solução voltada para a utilização
-                                    inteligente de espaços urbanos. Ela
-                                    interliga o carregamento inteligente de
-                                    veículos elétricos a soluções de
-                                    carregamento em estações urbanas e em
-                                    estradas. Com um mapeamento de estações
-                                    disponíveis para o usuário, permitindo
-                                    reserva, informações de recarga e facilidade
-                                    de pagamento.
+                                <p className="m-4 text-center text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                    Simplifique sua eletromobilidade em uma
+                                    única plataforma.
                                 </p>
                                 <div className="m-8 <md:m-4 place-self-center">
                                     <img
@@ -85,9 +79,47 @@ export default function App() {
                                     </p>
                                 </div>
                             </div>
+                            <div className="max-w-[1200px] grid items-center grid-flow-col <lg:grid-auto-flow-row grid-cols-[200px,repeat(auto-fill,minmax(15%,100px)),300px]">
+                                <div className="m-8 <md:m-4 place-self-center">
+                                    <img
+                                        alt="EV Charger"
+                                        className="rounded object-cover min-w-sm <md:min-w-16"
+                                        src="/moovolt-dashboard-eletropostos.webp"
+                                    />
+                                    <p className="text-muted text-center">
+                                        dashboard - últimas notificações dos
+                                        eletropostos
+                                    </p>
+                                </div>
+                                <p className="m-4 text-center text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                    O Moovolt é uma solução voltada para a
+                                    utilização inteligente de espaços urbanos.
+                                    Com um mapeamento de estações disponíveis
+                                    para o usuário.
+                                </p>
+                            </div>
+                            <div className="max-w-[1200px] grid items-center grid-flow-col <lg:grid-auto-flow-row grid-cols-[200px,repeat(auto-fill,minmax(15%,100px)),300px]">
+                                <p className="m-4 text-center text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                    Ele interliga o carregamento
+                                    inteligente de veículos elétricos a soluções
+                                    de carregamento em estações urbanas e
+                                    estradas, permitindo reserva, informações de
+                                    recarga e facilidade de pagamento.
+                                </p>
+                                <div className="m-8 <md:m-4 place-self-center">
+                                    <img
+                                        alt="EV Charger"
+                                        className="rounded object-cover min-w-sm <md:min-w-16"
+                                        src="/moovolt-dashboard-historico.webp"
+                                    />
+                                    <p className="text-muted text-center">
+                                        dashboard - histórico de eletropostos
+                                    </p>
+                                </div>
+                            </div>
                         </Card>
                     </section>
-                    <section className="w-full py-12 md:py-24 lg:py-32">
+                    <section className="w-full py-12 md:py-24 lg:py-32 border-t">
                         <div className="grid grid-items-center grid-justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                             <div className="space-y-3">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -99,7 +131,7 @@ export default function App() {
                                 </p>
                             </div>
                             <div className="grid w-full grid-flow-col <md:grid-flow-row grid-cols-center grid-items-start gap-6">
-                                <Card className="max-w-xs p-4 space-y-8 border">
+                                <Card className="max-h-sm aspect-9/16 p-4 space-y-8 border">
                                     <CardHeader>
                                         <div className="grid grid-place-items-center">
                                             <CardTitle>Velocidade</CardTitle>
@@ -121,7 +153,7 @@ export default function App() {
                                         </Button>
                                     </CardFooter>
                                 </Card>
-                                <Card className="max-w-xs p-4 space-y-8">
+                                <Card className="max-h-sm aspect-9/16 p-4 space-y-8">
                                     <CardHeader>
                                         <div className="grid grid-place-items-center">
                                             <CardTitle>Segurança</CardTitle>
@@ -143,7 +175,7 @@ export default function App() {
                                         </Button>
                                     </CardFooter>
                                 </Card>
-                                <Card className="max-w-xs p-4 space-y-8">
+                                <Card className="max-h-sm aspect-9/16 p-4 space-y-8">
                                     <CardHeader>
                                         <div className="grid grid-place-items-center">
                                             <CardTitle>Escalável</CardTitle>
@@ -169,18 +201,82 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section className="w-full py-12 md:py-24 lg:py-32 border-t">
-                        <div className="px-4 md:px-6">
-                            <div className="grid-center text-center gap-10 px-10 md:gap-16">
-                                <div className="space-y-16">
-                                    <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                                        Tenha um produto eficiente e completo
-                                    </h2>
-                                    <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm">
-                                        Tabela de benefícios
-                                    </div>
-                                </div>
-                            </div>
+                    <section className="grid w-full place-items-center *:text-center py-12 md:py-24 lg:py-32 border-t space-y-16">
+                        <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                            Tenha um produto eficiente e completo
+                        </h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <Card className="aspect-square place-content-center max-h-xs">
+                                <CardHeader className="items-center">
+                                    <Badge variant={"secondary"}>
+                                        Residencial
+                                    </Badge>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="font-montserrat text-muted-foreground">
+                                        Tenha total controle do carregamento do
+                                        seu veículo em casa, incluindo acesso,
+                                        consumo e telemetria da bateria.
+                                    </p>
+                                </CardContent>
+                            </Card>
+                            <Card className="aspect-square place-content-center max-h-xs">
+                                <CardHeader className="items-center">
+                                    <Badge variant={"secondary"}>
+                                        Condominial
+                                    </Badge>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="font-montserrat text-muted-foreground">
+                                        Controle o consumo de energia, cadastro
+                                        de usuários residentes, reserva de vagas
+                                        por horário, relatórios de consumo e
+                                        cobrança individualizados para cada
+                                        morador e muito mais.
+                                    </p>
+                                </CardContent>
+                            </Card>
+                            <Card className="aspect-square place-content-center max-h-xs">
+                                <CardHeader className="items-center">
+                                    <Badge variant={"secondary"}>
+                                        Hotéis e Pousadas
+                                    </Badge>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="font-montserrat text-muted-foreground">
+                                        Ofereça o mesmo gerenciamento que nos
+                                        condomínios, adaptado para hóspedes.
+                                    </p>
+                                </CardContent>
+                            </Card>
+                            <Card className="aspect-square place-content-center max-h-xs">
+                                <CardHeader className="items-center">
+                                    <Badge variant={"secondary"}>Frotas</Badge>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="font-montserrat text-muted-foreground">
+                                        Consumo de energia local, cadastro de
+                                        motoristas, reserva de vagas, relatórios
+                                        de consumo e cobrança para cada
+                                        motorista.
+                                    </p>
+                                </CardContent>
+                            </Card>
+                            <Card className="aspect-square place-content-center max-h-xs">
+                                <CardHeader className="items-center">
+                                    <Badge variant={"secondary"}>
+                                        Eletropostos
+                                    </Badge>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="font-montserrat text-muted-foreground">
+                                        Localize seu eletroposto em nosso
+                                        ecossistema para que os usuários dos
+                                        apps residenciais e de frotas possam
+                                        recarregar seus veículos.
+                                    </p>
+                                </CardContent>
+                            </Card>
                         </div>
                     </section>
                     <div className="bg-background">
