@@ -40,6 +40,10 @@ export function presetShadcn(options: PresetShadcnOptions = {}): Preset<Theme> {
               --input: 217.2 32.6% 17.5%;
               --ring: 224.3 76.3% 48%;
               --radius: 0.75rem;
+              --success: 120 62.8% 30.6%;
+              --success-foreground: 210 40% 98%;
+              --alert: 60 62.8% 30.6%;
+              --alert-foreground: 210 40% 98%;
             }
 
 
@@ -166,6 +170,14 @@ export function presetShadcn(options: PresetShadcnOptions = {}): Preset<Theme> {
         card: {
           DEFAULT: 'hsl(var(--card) / .66)',
           foreground: 'hsl(var(--card-foreground))',
+        },
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          foreground: 'hsl(var(--success-foreground))',
+        },
+        alert: {
+          DEFAULT: 'hsl(var(--alert))',
+          foreground: 'hsl(var(--alert-foreground))',
         },
       },
       borderRadius: {
