@@ -430,15 +430,21 @@ export default function App() {
                                 mapeamento que seja capaz de sinalizar onde há
                                 estações disponíveis para você e o melhor
                                 momento para reservar, recarregar e pagar, tudo
-                                em um único aplicativo, Tenha também o controle
-                                total de custos e telemetria na sua gestão de
-                                frotas. Um sistema inteligente de definição de
-                                rotas e melhores opções de recarga, além de
-                                cartões corporativos com benefícios e parceiros
-                                estratégicos para uma melhor eficiência
-                                logística. Adote a revolução elétrica no seu
-                                negócio, torne-o mais sustentável e ganhe mais
-                                economia.
+                                em um único aplicativo.
+                            </p>
+                            <br />
+                            <p>
+                                Tenha também o controle total de custos e
+                                telemetria na sua gestão de frotas. Um sistema
+                                inteligente de definição de rotas e melhores
+                                opções de recarga, além de cartões corporativos
+                                com benefícios e parceiros estratégicos para uma
+                                melhor eficiência logística.
+                            </p>
+                            <br />
+                            <p>
+                                Adote a revolução elétrica no seu negócio,
+                                torne-o mais sustentável e ganhe mais economia.
                             </p>
                         </Card>
                     </section>
