@@ -11,10 +11,20 @@ import {
 
 import { Badge } from "@/components/ui/badge";
 
+import { Toaster } from "@/components/ui/toaster"
+import { useToast } from "@/components/ui/use-toast";
+
 export default function App() {
+    const { toast } = useToast();
+
     function getCurrentYear(): number {
         const currentDate = new Date();
         return currentDate.getFullYear();
+    }
+
+    function getCurrentTime(): string {
+        const currentDate = new Date();
+        return currentDate.toLocaleDateString();
     }
 
     return (
@@ -34,9 +44,9 @@ export default function App() {
                                 />
                             </a>
                             <div className="flex-justify-self-end space-x-5xl <md:space-x-4 pr-48 <lg:pr-12 <sm:pr-0">
-                                <a href="#">Soluções</a>
-                                <a href="#">Preços</a>
-                                <a href="#">Sobre</a>
+                                <a href="#about">Sobre</a>
+                                <a href="#features">Soluções</a>
+                                <a href="#subscribe">Assinatura</a>
                             </div>
                         </div>
                     </div>
@@ -61,17 +71,20 @@ export default function App() {
                             </ul>
                         </div>
                     </section>
-                    <section className="grid w-full py-90 <lg:py-64 <md:py-24 place-items-center">
+                    <section
+                        id="about"
+                        className="grid w-full py-90 <lg:py-64 <md:py-24 place-items-center"
+                    >
                         <Card className="p-4">
                             <div className="max-w-[1200px] grid items-center grid-flow-col <lg:grid-auto-flow-row grid-cols-[200px,repeat(auto-fill,minmax(15%,100px)),300px]">
-                                <p className="m-4 text-center text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                <Card className="m-4 p-8 font-montserrat text-center text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                                     Simplifique sua eletromobilidade em uma
-                                    única plataforma.
-                                </p>
+                                    única plataforma
+                                </Card>
                                 <div className="m-8 <md:m-4 place-self-center">
                                     <img
                                         alt="EV Charger"
-                                        className="rounded object-cover min-w-sm <md:min-w-16"
+                                        className="rounded object-cover min-w-sm <md:min-w-16 op-80"
                                         src="/moovolt-dashboard-overview.webp"
                                     />
                                     <p className="text-muted text-center">
@@ -83,7 +96,7 @@ export default function App() {
                                 <div className="m-8 <md:m-4 place-self-center">
                                     <img
                                         alt="EV Charger"
-                                        className="rounded object-cover min-w-sm <md:min-w-16"
+                                        className="rounded object-cover min-w-sm <md:min-w-16 op-80"
                                         src="/moovolt-dashboard-eletropostos.webp"
                                     />
                                     <p className="text-muted text-center">
@@ -100,16 +113,16 @@ export default function App() {
                             </div>
                             <div className="max-w-[1200px] grid items-center grid-flow-col <lg:grid-auto-flow-row grid-cols-[200px,repeat(auto-fill,minmax(15%,100px)),300px]">
                                 <p className="m-4 text-center text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                                    Ele interliga o carregamento
-                                    inteligente de veículos elétricos a soluções
-                                    de carregamento em estações urbanas e
-                                    estradas, permitindo reserva, informações de
-                                    recarga e facilidade de pagamento.
+                                    Ele interliga o carregamento inteligente de
+                                    veículos elétricos a soluções de
+                                    carregamento em estações urbanas e estradas,
+                                    permitindo reserva, informações de recarga e
+                                    facilidade de pagamento.
                                 </p>
                                 <div className="m-8 <md:m-4 place-self-center">
                                     <img
                                         alt="EV Charger"
-                                        className="rounded object-cover min-w-sm <md:min-w-16"
+                                        className="rounded object-cover min-w-sm <md:min-w-16 op-80"
                                         src="/moovolt-dashboard-historico.webp"
                                     />
                                     <p className="text-muted text-center">
@@ -119,7 +132,10 @@ export default function App() {
                             </div>
                         </Card>
                     </section>
-                    <section className="w-full py-12 md:py-24 lg:py-32 border-t">
+                    <section
+                        id="advantages"
+                        className="w-full py-12 md:py-24 lg:py-32 border-t"
+                    >
                         <div className="grid grid-items-center grid-justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                             <div className="space-y-3">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -201,7 +217,10 @@ export default function App() {
                         </div>
                     </section>
 
-                    <section className="grid w-full place-items-center *:text-center py-12 md:py-24 lg:py-32 border-t space-y-16">
+                    <section
+                        id="features"
+                        className="grid w-full place-items-center *:text-center py-12 md:py-24 lg:py-32 border-t space-y-16"
+                    >
                         <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                             Tenha um produto eficiente e completo
                         </h2>
@@ -279,17 +298,20 @@ export default function App() {
                             </Card>
                         </div>
                     </section>
-                    <div className="bg-background">
-                        <section className="w-full py-12 md:py-24 lg:py-32">
+                    <div className="bg-gradient-to-t bg-gradient-from-gray-9 rounded-lg drop-shadow-2xl">
+                        <section
+                            id="subscribe"
+                            className="w-full py-12 md:py-24 lg:py-32"
+                        >
                             <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
                                 <div className="space-y-3">
                                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                                        Inscreva-se e tenha acesso aos
-                                        benefícios.
+                                        Inscreva-se e tenha acesso a benefícios
+                                        exclusivos para assinantes
                                     </h2>
                                     <p className="text-gray-500 dark:text-gray-400">
                                         Receba atualizações e vantagens
-                                        cadastrando seu e-mail.
+                                        cadastrando seu e-mail
                                     </p>
                                 </div>
                                 <div className="flex w-full max-w-md mx-auto items-center justify-center space-x-2">
@@ -298,12 +320,26 @@ export default function App() {
                                         placeholder="Seu e-mail"
                                         type="email"
                                     />
-                                    <Button type="submit">Inscrever</Button>
+                                    <Button
+                                        variant={"secondary"}
+                                        type="submit"
+                                        onClick={() => {
+                                            toast({
+                                                className: "font-montserrat font-black",
+                                                title: "Inscrito!",
+                                                description: `registrado em ${getCurrentTime()}`,
+                                                variant: "success"
+                                            });
+                                        }}
+                                    >
+                                        Inscrever
+                                    </Button>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </main>
+                <Toaster />
             </div>
             <footer className="w-full py-12">
                 <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-10 md:flex-row">
