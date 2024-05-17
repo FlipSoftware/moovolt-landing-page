@@ -57,10 +57,10 @@ export default defineConfig({
         @keyframes pulse {
             0%,
             100% {
-              opacity: 0.5;
+              opacity: 0.66;
             }
             50% {
-              opacity: 0.25;
+              opacity: 0.33;
             }
           }
           .hero-pulse {
