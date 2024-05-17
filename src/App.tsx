@@ -11,7 +11,7 @@ import {
 
 import { Badge } from "@/components/ui/badge";
 
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
 
 export default function App() {
@@ -224,15 +224,18 @@ export default function App() {
                         <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                             Tenha um produto eficiente e completo
                         </h2>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="*:font-montserrat grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <Card className="aspect-square place-content-center max-h-xs">
                                 <CardHeader className="items-center">
-                                    <Badge variant={"secondary"}>
+                                    <Badge
+                                        variant={"secondary"}
+                                        className="uppercase bg-teal-9"
+                                    >
                                         Residencial
                                     </Badge>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="font-montserrat text-muted-foreground">
+                                    <p className="text-muted-foreground">
                                         Tenha total controle do carregamento do
                                         seu veículo em casa, incluindo acesso,
                                         consumo e telemetria da bateria.
@@ -241,12 +244,15 @@ export default function App() {
                             </Card>
                             <Card className="aspect-square place-content-center max-h-xs">
                                 <CardHeader className="items-center">
-                                    <Badge variant={"secondary"}>
+                                    <Badge
+                                        variant={"secondary"}
+                                        className="uppercase bg-teal-9"
+                                    >
                                         Condominial
                                     </Badge>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="font-montserrat text-muted-foreground">
+                                    <p className="text-muted-foreground">
                                         Controle o consumo de energia, cadastro
                                         de usuários residentes, reserva de vagas
                                         por horário, relatórios de consumo e
@@ -257,12 +263,15 @@ export default function App() {
                             </Card>
                             <Card className="aspect-square place-content-center max-h-xs">
                                 <CardHeader className="items-center">
-                                    <Badge variant={"secondary"}>
+                                    <Badge
+                                        variant={"secondary"}
+                                        className="uppercase bg-teal-9"
+                                    >
                                         Hotéis e Pousadas
                                     </Badge>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="font-montserrat text-muted-foreground">
+                                    <p className="text-muted-foreground">
                                         Ofereça o mesmo gerenciamento que nos
                                         condomínios, adaptado para hóspedes.
                                     </p>
@@ -270,10 +279,15 @@ export default function App() {
                             </Card>
                             <Card className="aspect-square place-content-center max-h-xs">
                                 <CardHeader className="items-center">
-                                    <Badge variant={"secondary"}>Frotas</Badge>
+                                    <Badge
+                                        variant={"secondary"}
+                                        className="uppercase bg-teal-9"
+                                    >
+                                        Frotas
+                                    </Badge>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="font-montserrat text-muted-foreground">
+                                    <p className="text-muted-foreground">
                                         Consumo de energia local, cadastro de
                                         motoristas, reserva de vagas, relatórios
                                         de consumo e cobrança para cada
@@ -283,12 +297,15 @@ export default function App() {
                             </Card>
                             <Card className="aspect-square place-content-center max-h-xs">
                                 <CardHeader className="items-center">
-                                    <Badge variant={"secondary"}>
+                                    <Badge
+                                        variant={"secondary"}
+                                        className="uppercase bg-teal-9"
+                                    >
                                         Eletropostos
                                     </Badge>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="font-montserrat text-muted-foreground">
+                                    <p className="text-muted-foreground">
                                         Localize seu eletroposto em nosso
                                         ecossistema para que os usuários dos
                                         apps residenciais e de frotas possam
@@ -296,6 +313,104 @@ export default function App() {
                                     </p>
                                 </CardContent>
                             </Card>
+                        </div>
+                    </section>
+                    <section className="w-full py-12 md:py-24 lg:py-32">
+                        <div className="grid-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+                            <div className="space-y-3">
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                                    Testado e Aprovado
+                                </h2>
+                                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                    Nossos clientes atestam a qualidade de
+                                    nossos produtos.
+                                </p>
+                            </div>
+                            <div className="grid-center w-full grid-flow-col <md:grid-flow-row gap-6 md:grid-cols-3 md:gap-12">
+                                <Card className="grid place-items-center max-w-xs p-8 flex-center w-full space-y-2">
+                                    <img
+                                        alt="Avatar"
+                                        className="rounded-full object-cover op-50"
+                                        height="150"
+                                        src="/walmir.webp"
+                                        style={{
+                                            aspectRatio: "150/150",
+                                            objectFit: "cover",
+                                        }}
+                                        width="150"
+                                    />
+                                    <p className="text-gray-5">
+                                        Walmir do Caminhão
+                                        <br />
+                                        (gestor de frotas)
+                                    </p>
+                                    <hr />
+                                    <p>
+                                        Com a Moov.Olt eu consigo planejar a
+                                        logística, as recargas, os custos e a
+                                        rota em tempo real de toda a minha
+                                        equipe numa boa. O que me convenceu a
+                                        testar e aderir esse sistema deles foi
+                                        poder ter um banco de dados com todos os
+                                        relatórios e informações num sistema de
+                                        gestão integrado, feito certinho para a
+                                        gestão de minhas frotas.{" "}
+                                    </p>
+                                </Card>
+                                <Card className="grid place-items-center max-w-xs p-8 flex-center w-full space-y-2">
+                                    <img
+                                        alt="Avatar"
+                                        className="rounded-full object-cover op-50"
+                                        height="150"
+                                        src="/jurandir.webp"
+                                        style={{
+                                            aspectRatio: "150/150",
+                                            objectFit: "cover",
+                                        }}
+                                        width="150"
+                                    />
+                                    <p className="text-gray-5">
+                                        Seu Jurandir
+                                        <br />
+                                        (dono de eletroposto)
+                                    </p>
+                                    <hr />
+                                    <p>
+                                        Quando eu entrei para o ecossistema da
+                                        Moovolt o número de clientes fazendo
+                                        recargas no meu eletroposto aumentou
+                                        127% e está completando apenas 3 meses.
+                                    </p>
+                                </Card>
+                                <Card className="grid place-items-center max-w-xs p-8 flex-center w-full space-y-2">
+                                    <img
+                                        alt="Avatar"
+                                        className="rounded-full object-cover op-50"
+                                        height="150"
+                                        src="/abigail.webp"
+                                        style={{
+                                            aspectRatio: "150/150",
+                                            objectFit: "cover",
+                                        }}
+                                        width="150"
+                                    />
+                                    <p className="text-gray-5">
+                                        Abigail Hoffman
+                                        <br />
+                                        (empresária e usuária do app)
+                                    </p>
+                                    <hr />
+                                    <p>
+                                        Com o app da Moov.Olt eu consigo
+                                        carregar meu veículo em qualquer local
+                                        que eu estiver com o mesmo aplicativo
+                                        que eu uso para carregar em casa. O que
+                                        eu mais gosto na experiência deste
+                                        serviço é acompanhar o desempenho, o
+                                        consumo e a vida útil da minha bateria.{" "}
+                                    </p>
+                                </Card>
+                            </div>
                         </div>
                     </section>
                     <div className="bg-gradient-to-t bg-gradient-from-gray-9 rounded-lg drop-shadow-2xl">
@@ -325,10 +440,11 @@ export default function App() {
                                         type="submit"
                                         onClick={() => {
                                             toast({
-                                                className: "font-montserrat font-black",
+                                                className:
+                                                    "font-montserrat font-black",
                                                 title: "Inscrito!",
                                                 description: `registrado em ${getCurrentTime()}`,
-                                                variant: "success"
+                                                variant: "success",
                                             });
                                         }}
                                     >
