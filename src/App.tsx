@@ -44,9 +44,9 @@ export default function App() {
                                 />
                             </a>
                             <div className="flex-justify-self-end space-x-5xl <md:space-x-4 pr-48 <lg:pr-12 <sm:pr-0">
-                                <a href="#about">Sobre</a>
                                 <a href="#features">Soluções</a>
                                 <a href="#subscribe">Assinatura</a>
+                                <a href="#about">Sobre</a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ export default function App() {
                         </div>
                     </section>
                     <section
-                        id="about"
+                        id="overview"
                         className="grid w-full py-90 <lg:py-64 <md:py-24 place-items-center"
                     >
                         <Card className="p-4">
@@ -346,7 +346,7 @@ export default function App() {
                                     </p>
                                     <hr />
                                     <p>
-                                        Com a Moov.Olt eu consigo planejar a
+                                        Com a Moovolt eu consigo planejar a
                                         logística, as recargas, os custos e a
                                         rota em tempo real de toda a minha
                                         equipe numa boa. O que me convenceu a
@@ -401,17 +401,46 @@ export default function App() {
                                     </p>
                                     <hr />
                                     <p>
-                                        Com o app da Moov.Olt eu consigo
-                                        carregar meu veículo em qualquer local
-                                        que eu estiver com o mesmo aplicativo
-                                        que eu uso para carregar em casa. O que
-                                        eu mais gosto na experiência deste
-                                        serviço é acompanhar o desempenho, o
-                                        consumo e a vida útil da minha bateria.{" "}
+                                        Com o app da Moovolt eu consigo carregar
+                                        meu veículo em qualquer local que eu
+                                        estiver com o mesmo aplicativo que eu
+                                        uso para carregar em casa. O que eu mais
+                                        gosto na experiência deste serviço é
+                                        acompanhar o desempenho, o consumo e a
+                                        vida útil da minha bateria.{" "}
                                     </p>
                                 </Card>
                             </div>
                         </div>
+                    </section>
+                    <section id="about">
+                        <Card className="max-w-prose my-32 p-8 text-center">
+                            <h1 className="text-xl leading-20">
+                                Nós somos a MOOVOLT
+                            </h1>
+                            <hr />
+                            <p className="mt-8">
+                                O nosso negócio é colocar você no centro da
+                                eletromobilidade. Com a utilização inteligente
+                                de espaços urbanos e estradas, interligando o
+                                carregamento inteligente de veículos elétricos e
+                                híbridos plug-in à soluções de carregamento
+                                durante todo o seu percurso, desde a sua
+                                residência até o seu destino final, fazendo um
+                                mapeamento que seja capaz de sinalizar onde há
+                                estações disponíveis para você e o melhor
+                                momento para reservar, recarregar e pagar, tudo
+                                em um único aplicativo, Tenha também o controle
+                                total de custos e telemetria na sua gestão de
+                                frotas. Um sistema inteligente de definição de
+                                rotas e melhores opções de recarga, além de
+                                cartões corporativos com benefícios e parceiros
+                                estratégicos para uma melhor eficiência
+                                logística. Adote a revolução elétrica no seu
+                                negócio, torne-o mais sustentável e ganhe mais
+                                economia.
+                            </p>
+                        </Card>
                     </section>
                     <div className="bg-gradient-to-t bg-gradient-from-gray-9 rounded-lg drop-shadow-2xl">
                         <section
