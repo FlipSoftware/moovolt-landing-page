@@ -495,7 +495,7 @@ export default function App() {
             <footer className="w-full py-12">
                 <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-10 md:flex-row">
                     <p className="text-sm tracking-wide">
-                    moovoltcontato@gmail.com <br /><br /> © 2022 - {getCurrentYear()} MOOV.OLT
+                    moovoltcontato@gmail.com <br /><br /> © 2023 - {getCurrentYear()} MOOV.OLT
                     </p>
                     <div className="grid grid-place-items-center md:grid-cols-3 gap-4 space-x-10">
                         <div className="grid grid-flow-col gap-4">
